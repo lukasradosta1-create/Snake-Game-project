@@ -1,0 +1,165 @@
+/* Základní nastavení stránky */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 8px 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #111827;
+}
+
+/* Hlavní panel hry */
+.game {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 24px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+/* Nadpis */
+h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Skóre */
+.score-box {
+    font-size: 20px;
+    font-weight: bold;
+    color: #374151;
+}
+
+#score {
+    color: #22c55e;
+    font-size: 24px;
+}
+
+/* Herní plocha */
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background: #06130d;
+    border: 4px solid #d1ddd5;
+    border-radius: 16px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Stav hry */
+.game-status {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f3f4f6;
+    color: #dc2626;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Tlačítko restart */
+#restart {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #1769e8;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#restart:hover {
+    background: #1254bd;
+    transform: translateY(-1px);
+}
+
+#restart:active {
+    transform: scale(0.98);
+}
+
+/* Ovládací šipky */
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0px;
+}
+
+.middle-controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.control {
+    width: 48px;
+    height: 42px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.control:hover {
+    background: #e5edfa;
+}
+
+.control:active {
+    transform: scale(0.94);
+}
+
+/* Přizpůsobení mobilním telefonům */
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px;
+        align-items: flex-start;
+    }
+
+    .game {
+        padding: 20px 14px;
+        gap: 13px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .score-box {
+        font-size: 18px;
+    }
+
+    #restart {
+        font-size: 16px;
+    }
+}
+
